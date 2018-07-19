@@ -5,7 +5,7 @@ pila::pila()
 	tope = -1;
 }
 
-void pila::push(Cartas cart)
+void pila::push(Carta cart)
 {
 	if (!estaLLena())
 	{
@@ -13,7 +13,7 @@ void pila::push(Cartas cart)
 		tope++;
 	}
 }
-Cartas pila::pop()
+Carta pila::pop()
 {
 	if (!estaVacia())
 	{

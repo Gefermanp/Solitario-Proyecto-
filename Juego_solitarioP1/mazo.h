@@ -1,16 +1,17 @@
+#pragma once
 #include "Carta.h"
-#include <stdlib.h>
-#include <time.h>
+
 
 class mazo
 {
 public:
 	mazo();
-	Cartas repartirCarta();
+	Carta tomarCarta();
 	void barajar();
+	int cartasEnMazo();
 
 private:
-	Cartas carta[40];
+	Carta carta[40];
 	int contador;
 };
 

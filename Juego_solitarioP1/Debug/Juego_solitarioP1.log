@@ -1,10 +1,2 @@
-﻿  Carta.cpp
-  Main.cpp
-  mazo.cpp
-c:\users\gerardo\desktop\geferman\2)universidad\codigos(programas)\juego_solitariop1\mazo.cpp(136): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-  pila.cpp
-  tablero.cpp
-  Generando código...
-c:\users\gerardo\desktop\geferman\2)universidad\codigos(programas)\juego_solitariop1\pila.cpp(23): warning C4715: 'pila::pop': no todas las rutas de acceso de control devuelven un valor
-c:\users\gerardo\desktop\geferman\2)universidad\codigos(programas)\juego_solitariop1\mazo.cpp(130): warning C4715: 'mazo::repartirCarta': no todas las rutas de acceso de control devuelven un valor
+﻿  tablero.cpp
   Juego_solitarioP1.vcxproj -> C:\Users\Gerardo\Desktop\Geferman\2)Universidad\Codigos(Programas)\Juego_solitarioP1\Debug\Juego_solitarioP1.exe

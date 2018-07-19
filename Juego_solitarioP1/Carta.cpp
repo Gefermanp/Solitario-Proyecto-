@@ -1,46 +1,76 @@
 #include "Carta.h"
 
-Cartas::Cartas()
+Carta::Carta()
 {
 
 }
-Cartas::Cartas(int v, int p, string name)
+Carta::Carta(int v, int p, string name)
 {
 	valor = v;
 	pinta = p;
 	nombre = name;
 }
 
-void Cartas::setValor(int _valor)
+void Carta::setValor(int _valor)
 {
 	valor = _valor;
 }
-void Cartas::setPinta(int _pinta)
+void Carta::setPinta(int _pinta)
 {
 	pinta = _pinta;
 }
-void Cartas::setNombre(string _nombre)
+void Carta::setNombre(string _nombre)
 {
 	nombre = _nombre;
 }
 
-int Cartas::getvalor()
+int Carta::getvalor()
 {
 	return valor;
 }
-int Cartas::getPinta()
+int Carta::getPinta()
 {
 	return pinta;
 }
-string Cartas::getNombre()
+string Carta::getNombre()
 {
 	return nombre;
 }
-/*void Carta::muestraCarta() //dibujar
+void Carta::cartaDestapada(int x, int y)
 {
+	/*cout<<" ______________ " <<endl
+	<<	"|              |" <<endl
+	<<	"|              |" <<endl
+	<<	"|              |" <<endl
+	<<	"|              |" <<endl
+	<<	"|              |" <<endl
+	<<	"|              |" <<endl
+	<<	"|              |" <<endl
+	<<	"|              |" <<endl
+	<<	"|              |" <<endl
+	<<	"|              |" <<endl
+	<< "|______________|";*/
 
+	utilitario naipe;
+
+	for (int i = x; i <= x + 10; i++) {
+		naipe.gotoxy(i, y); printf("%c", 205);
+		naipe.gotoxy(i, y + 10); printf("%c", 205);
+	}
+
+	for (int i = y; i <= y + 10; i++) {
+		naipe.gotoxy(x, i); printf("%c", 186);
+		naipe.gotoxy(x + 10, i); printf("%c", 186);
+	}
+	naipe.gotoxy(x, y); printf("%c", 201);
+	naipe.gotoxy(x + 10, y); printf("%c", 187);
+	naipe.gotoxy(x, y + 10); printf("%c", 200);
+	naipe.gotoxy(x + 10, y + 10); printf("%c", 188);
+
+	naipe.gotoxy(x + 1, y + 1); cout << valor;
+
+	if (pinta == 0) { naipe.gotoxy(x + 3, y + 3); cout << "ORO"; }
+	if (pinta == 1) { naipe.gotoxy(x + 3, y + 3); cout << "COPA"; }
+	if (pinta == 2) { naipe.gotoxy(x + 3, y + 3); cout << "BASTO"; }
+	if (pinta == 3) { naipe.gotoxy(x + 3, y + 3); cout << "ESPADA"; }
 }
-bool Carta::cartaDestapada() //falta completar
-{
-
-}*/

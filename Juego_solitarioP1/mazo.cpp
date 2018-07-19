@@ -34,26 +34,25 @@ mazo::mazo()
 			{
 				carta[i].setValor(1);
 			}
-			else if (i >= 17)
+			else if (carta[i - 1].getvalor() >= 7)
 			{
-				aux = 9;
-				do
+				switch (carta[i - 1].getvalor())
 				{
-					aux += 1;
-					carta[i].setValor(aux);
-					i++;
-				} while (i<20);
+				case 7:
+					carta[i].setValor(10);
+					break;
+				case 10:
+					carta[i].setValor(11);
+					break;
+				case 11:
+					carta[i].setValor(12);
+					break;
+				}
 			}
-			else
+			else if (carta[i - 1].getvalor() >= 1 && carta[i - 1].getvalor() <7)
 			{
-				aux = 1;
-				do
-				{
-					aux += 1;
-					carta[i].setValor(aux);
-					i++;
-				} while (i<17);
-
+				aux = carta[i-1].getvalor() + 1;
+				carta[i].setValor(aux);
 			}
 		}
 		else if (i >= 20 && i<30)
@@ -64,26 +63,25 @@ mazo::mazo()
 			{
 				carta[i].setValor(1);
 			}
-			else if (i >= 27)
+			else if (carta[i - 1].getvalor() >= 7)
 			{
-				aux = 9;
-				do
+				switch (carta[i - 1].getvalor())
 				{
-					aux += 1;
-					carta[i].setValor(aux);
-					i++;
-				} while (i<30);
+				case 7:
+					carta[i].setValor(10);
+					break;
+				case 10:
+					carta[i].setValor(11);
+					break;
+				case 11:
+					carta[i].setValor(12);
+					break;
+				}
 			}
-			else
+			else if (carta[i - 1].getvalor() >= 1 && carta[i - 1].getvalor() <7)
 			{
-				aux = 1;
-				do
-				{
-					aux += 1;
-					carta[i].setValor(aux);
-					i++;
-				} while (i<27);
-
+				aux = carta[i - 1].getvalor() + 1;
+				carta[i].setValor(aux);
 			}
 		}
 		else if (i >= 30 && i<40)
@@ -94,33 +92,32 @@ mazo::mazo()
 			{
 				carta[i].setValor(1);
 			}
-			else if (i >= 37)
+			else if (carta[i - 1].getvalor() >= 7)
 			{
-				aux = 9;
-				do
+				switch (carta[i - 1].getvalor())
 				{
-					aux += 1;
-					carta[i].setValor(aux);
-					i++;
-				} while (i<40);
+				case 7:
+					carta[i].setValor(10);
+					break;
+				case 10:
+					carta[i].setValor(11);
+					break;
+				case 11:
+					carta[i].setValor(12);
+					break;
+				}
 			}
-			else
+			else if (carta[i - 1].getvalor() >= 1 && carta[i - 1].getvalor() <7)
 			{
-				aux = 1;
-				do
-				{
-					aux += 1;
-					carta[i].setValor(aux);
-					i++;
-				} while (i<37);
-
+				aux = carta[i - 1].getvalor() + 1;
+				carta[i].setValor(aux);
 			}
 		}
 	}
 }
 
 
-Cartas mazo::repartirCarta()
+Carta mazo::tomarCarta()
 {
 	if (contador != -1)
 	{
@@ -132,7 +129,7 @@ Cartas mazo::repartirCarta()
 void mazo::barajar()
 {
 	int num, c;
-	Cartas aux;
+	Carta aux;
 	srand(time(NULL));
 	for (c = 0; c < 40; c++)
 	{
@@ -141,7 +138,9 @@ void mazo::barajar()
 		carta[c] = carta[num];
 		carta[num] = aux;
 	}
-	
+}
 
-
+int mazo::cartasEnMazo()
+{
+	return contador;
 }
