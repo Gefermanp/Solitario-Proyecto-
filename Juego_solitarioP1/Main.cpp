@@ -1,0 +1,8 @@
+#include "mazo.h"
+#include "pila.h"
+
+int main()
+{
+	
+	return 0;
+}
