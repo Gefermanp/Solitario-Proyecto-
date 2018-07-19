@@ -9,12 +9,12 @@ class mazo
 {
 public:
 	mazo();
-	mazo(Carta cartt);
-	Carta getCarta();
+	Carta repartirCarta();
 	void barajar();
-	void setCarta(Carta cartt);
+
 private:
 	Carta carta[40];
+	int contador;
 };
 
 #endif // !_MAZO_H

@@ -14,7 +14,7 @@ public:
 
 private:
 	int tope;
-	Carta cartas[40];
+	Carta cartas[3];
 };
 
 #endif //_PILA_H

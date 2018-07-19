@@ -28,7 +28,7 @@ bool pila::estaVacia()
 }
 bool pila::estaLLena()
 {
-	return (tope = 39);
+	return (tope = 3);
 }
 int pila::cuantos()
 {

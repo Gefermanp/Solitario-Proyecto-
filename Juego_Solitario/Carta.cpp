@@ -36,7 +36,10 @@ string Carta::getNombre()
 {
 	return nombre;
 }
-
+void Carta::muestraCarta()//dibujar :S
+{
+	cout<< carta.getNombre() carta.getvalor();
+}
 bool Carta::cartaDestapada() //falta completar
 {
 

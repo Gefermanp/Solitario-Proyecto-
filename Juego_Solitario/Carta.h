@@ -16,7 +16,8 @@ public:
 	int getvalor();
 	int getPinta();
 	string getNombre();
-	bool cartaDestapada(); //falta Completar
+	bool cartaDestapada(); //falta Completar e incluir la clase que sera de uso.
+	void muestraCarta();  //falta
 private:
 	int valor;
 	int pinta;
