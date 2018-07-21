@@ -1,6 +1,6 @@
 #pragma once
 #include "utilitario.h"
-
+#include <string>
 
 class Carta
 {
@@ -13,7 +13,9 @@ public:
 	int getvalor();
 	int getPinta();
 	string getNombre();
-	void cartaDestapada(int x, int y); //falta Completar e incluir la clase que sera de uso.
+	void cartaTapada(int x, int y);
+	void cartaDestapada(int x, int y); 
+	
 private:
 	int valor;
 	int pinta;

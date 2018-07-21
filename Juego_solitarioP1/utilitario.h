@@ -3,7 +3,7 @@
 #include <windows.h> 
 #include <stdlib.h>
 #include <iostream>
-#include <string>
+#include <istream>
 #include <time.h> 
 #include <conio.h>
 
@@ -14,9 +14,10 @@ class utilitario
 {
 public:
 	utilitario();
+	bool AjustarVentana(int Ancho, int Alto);
 	void gotoxy(int x, int y);
-private:
-
+	void ocultarcursor();
+	
 };
 
 

@@ -1,17 +1,20 @@
 #include "mazo.h"
 #include "pila.h"
-#define MAXX 100
+
 class tablero
 {
 public:
 	tablero();
-	//void dibujartablero();
+	void dibujarTablero();
 	void colocarCartas();
-
-
+	void barajar();
+	int cuantosComodines();
+	void pedirComodin();
+	void dibujaComodin();
 private:
 	mazo _mazo;
-	pila comodin;
+	Carta comodin[4];
 	Carta posicion[36];
+	int i = 3;
 };
 
